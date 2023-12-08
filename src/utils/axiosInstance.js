@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://localhost:7015",
+  baseURL: "https://serverheliverse.onrender.com/",
 });
 
 export default instance;

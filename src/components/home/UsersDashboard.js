@@ -81,7 +81,7 @@ const UsersDashboard = () => {
 
   useEffect(() => {
     refetch();
-  }, [isLoading]);
+  }, [isLoading, refetch]);
 
   const userEmail = Cookies.get("userEmail");
   return (
