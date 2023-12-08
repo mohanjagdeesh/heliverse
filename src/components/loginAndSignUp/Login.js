@@ -31,7 +31,7 @@ const Login = () => {
       Cookies.set("userEmail", response?.userDetails?.email);
       toast.success("User LoggedIn Successfully");
       reset();
-      navigate("/");
+      navigate("/home");
     } else {
       toast.error(`${response?.statusText}`);
     }
@@ -40,7 +40,7 @@ const Login = () => {
   useEffect(() => {
     const jwtToken = Cookies.get("jwtToken");
     if (jwtToken) {
-      navigate("/");
+      navigate("/home");
     }
   });
 

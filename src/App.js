@@ -12,11 +12,11 @@ const App = () => {
     <div className=" font-serif">
       <Routes>
         <Route element={<ProtectedRoutes />}>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/home" element={<Home />} />
           <Route exact path="/teams" element={<Teams />} />
           <Route exact path="/:userId" element={<SingleUserDetails />} />
         </Route>
-        <Route exact path="/login" element={<Login />} />
+        <Route exact path="/" element={<Login />} />
         <Route exact path="/signup" element={<SignUp />} />
       </Routes>
     </div>

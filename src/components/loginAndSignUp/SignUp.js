@@ -60,7 +60,7 @@ const SignUp = () => {
       dispatch(setProfilePic(""));
       toast.success("User Created Successfully");
       reset();
-      navigate("/login");
+      navigate("/");
     } else {
       const errorMessage = response?.response?.data?.message;
       toast.error(errorMessage);
@@ -198,7 +198,7 @@ const SignUp = () => {
             </form>
             <h1 className="text-center">
               Already registered?{" "}
-              <Link to="/login">
+              <Link to="/">
                 <span className="text-[#FFA3BE] underline cursor-pointer">
                   Login
                 </span>

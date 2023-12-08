@@ -26,11 +26,11 @@ const Header = () => {
     Cookies.remove("jwtToken");
     Cookies.remove("userEmail");
     dispatch(setInitialState());
-    navigate("/login");
+    navigate("/");
   };
   return (
     <div>
-      {path === "/login" && (
+      {path === "/" && (
         <div className=" flex justify-between items-center py-10">
           <img src={logo} alt="logo" className="w-[100px] md:w-[250px]" />
           <button
@@ -45,7 +45,7 @@ const Header = () => {
         <div className=" flex justify-between items-center py-10">
           <img src={logo} alt="logo" className="w-[100px] md:w-[250px]" />
           <button
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/")}
             className=" bg-[#474BCA] font-bold text-[12px] w-[100px] md:w-[150px] md:text-[15px] p-1 text-white rounded-md"
           >
             Login
@@ -56,7 +56,7 @@ const Header = () => {
       {path === "/teams" && (
         <div className=" flex justify-between items-center py-10">
           <img src={logo} alt="logo" className="w-[100px] md:w-[250px]" />
-          <Link to="/">
+          <Link to="/home">
             <h1 className="underline text-blue-800 font-bold text-[15px] md:text-[20px] cursor-pointer">
               Home
             </h1>
@@ -70,7 +70,7 @@ const Header = () => {
         </div>
       )}
 
-      {path === "/" && (
+      {path === "/home" && (
         <div className=" md:flex md:justify-between md:flex-row md:items-center py-10 flex flex-col gap-3">
           <div className="flex justify-between w-full md:w-3/5">
             <img

@@ -15,7 +15,7 @@ const SingleUserDetails = () => {
     Cookies.remove("jwtToken");
     Cookies.remove("userEmail");
     dispatch(setInitialState());
-    navigate("/login");
+    navigate("/");
   };
 
   const { data: specificUser } = useQuery({
@@ -31,7 +31,7 @@ const SingleUserDetails = () => {
       <div className=" w-11/12 mx-auto flex flex-col">
         <div className=" flex justify-between items-center py-10">
           <img src={logo} alt="logo" className="w-[100px] md:w-[250px]" />
-          <Link to="/">
+          <Link to="/home">
             <h1 className="underline text-blue-800 font-bold text-[15px] md:text-[20px] cursor-pointer">
               Home
             </h1>
@@ -67,7 +67,7 @@ const SingleUserDetails = () => {
             <span className="text-blue-600">{specificUser?.domain}</span>
           </h1>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className=" bg-[#474BCA] font-bold text-[15px] w-[140px] p-1 text-white rounded-md self-center"
           >
             Back
