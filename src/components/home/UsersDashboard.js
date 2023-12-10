@@ -94,7 +94,7 @@ const UsersDashboard = () => {
           <div className="flex flex-col gap-1  w-11/12">
             <label
               htmlFor="search"
-              className="font-bold text-[12px] md:text-[17px] md:text-black text-white"
+              className="font-bold text-[12px] md:text-[17px] text-white"
             >
               Search User
             </label>
@@ -116,7 +116,7 @@ const UsersDashboard = () => {
           <div className="flex flex-col gap-1  w-11/12">
             <label
               htmlFor="gender"
-              className="font-bold text-[12px] md:text-[17px] md:text-black text-white"
+              className="font-bold text-[12px] md:text-[17px] text-white"
             >
               Gender
             </label>
@@ -142,7 +142,7 @@ const UsersDashboard = () => {
           <div className="flex flex-col gap-1  w-11/12">
             <label
               htmlFor="available"
-              className="font-bold text-[12px] md:text-[17px] md:text-black text-white"
+              className="font-bold text-[12px] md:text-[17px] text-white"
             >
               Availability
             </label>
@@ -162,7 +162,7 @@ const UsersDashboard = () => {
           <div className="flex flex-col gap-1  w-11/12">
             <label
               htmlFor="domain"
-              className="font-bold text-[12px] md:text-[17px] md:text-black text-white"
+              className="font-bold text-[12px] md:text-[17px] text-white"
             >
               Domain
             </label>
