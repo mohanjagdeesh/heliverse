@@ -37,9 +37,7 @@ const Teams = () => {
                 src={`${each?.avatar}`}
                 alt="userPic"
               />
-              <h1>
-                Name:-{each?.first_name} {each?.last_name}
-              </h1>
+              <h1>Name:-{each?.name}</h1>
               <h1>Gender:-{each?.gender}</h1>
               <h1>Email:-{each?.email}</h1>
               <h1>Domain:-{each?.domain}</h1>
