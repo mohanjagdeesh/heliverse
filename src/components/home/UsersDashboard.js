@@ -88,9 +88,7 @@ const UsersDashboard = () => {
     <div className="flex flex-col gap-2 md:mt-5">
       <div className="md:flex md:justify-between md:flex-row flex flex-col">
         <div className=" flex flex-col w-full md:w-1/3 lg:w-1/4 items-center justify-between h-fit gap-3 md:gap-5 sticky top-0 md:static  bg-[#263865] py-3 rounded-md">
-          <h1 className="text-[20px] font-bold text-white md:text-blue-600">
-            Filters
-          </h1>
+          <h1 className="text-[20px] font-bold text-white">Filters</h1>
           <div className="flex flex-col gap-1  w-11/12">
             <label
               htmlFor="search"

@@ -1,6 +1,6 @@
 import loginImage from "../../images/LoginImage.png";
 import { useDispatch, useSelector } from "react-redux";
-import { loginVisibility } from "../../reduxStore/users/usersSlice";
+import { loginVisibility, setLoader } from "../../reduxStore/users/usersSlice";
 import { BsEyeFill, BsEyeSlashFill } from "react-icons/bs";
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
@@ -11,18 +11,23 @@ import Toasting from "../../toasting/toast";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
 import Header from "../home/Header";
+import Loader from "../loader/Loader";
 
 const Login = () => {
-  const { loginPasswordVisibility } = useSelector((store) => store.user);
+  const { loginPasswordVisibility, loader } = useSelector(
+    (store) => store.user
+  );
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { register, reset, handleSubmit } = useForm();
 
-  const { mutateAsync: userLoginMutation } = useMutation({
+  const { mutateAsync: userLoginMutation, isLoading } = useMutation({
     mutationKey: ["userLogin"],
     mutationFn: CheckUser,
   });
+
+  dispatch(setLoader(isLoading));
 
   const captureUserDetails = async (data) => {
     const response = await userLoginMutation({ data });
@@ -125,6 +130,7 @@ const Login = () => {
         </div>
       </div>
       <Toasting />
+      {loader && <Loader />}
     </div>
   );
 };
